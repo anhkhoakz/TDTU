@@ -5,7 +5,8 @@
 void ListDivisor(int n); // Hàm liệt kê các ước số của n
 int Func23(int n);
 
-int main() {
+int main()
+{
 	int n = 100;
 	int count = 0;
 
@@ -15,19 +16,25 @@ int main() {
 	printf("So cac uoc so cua n la: %d \n", count);
 }
 
-void ListDivisor(int n) {
+void ListDivisor(int n)
+{
 	printf("Uoc so cua n la: ");
-	for(int i = 0; i < n; ++i) {
-		if(n % (i + 1) == 0) {
+	for (int i = 0; i < n; ++i)
+	{
+		if (n % (i + 1) == 0)
+		{
 			printf("%d ", i + 1);
 		}
 	}
 }
 
-int Func23(int n) {
+int Func23(int n)
+{
 	int count = 0;
-	for(int i = 0; i < n; ++i) {
-		if(n % (i + 1) == 0) {
+	for (int i = 0; i < n; ++i)
+	{
+		if (n % (i + 1) == 0)
+		{
 			++count;
 		}
 	}

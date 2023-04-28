@@ -1,4 +1,4 @@
-# Exercise 4: Determine the minima or maxima 
+# Exercise 4: Determine the minima or maxima
 # of the functions f(x) following:
 import sympy as sp
 import numpy as np

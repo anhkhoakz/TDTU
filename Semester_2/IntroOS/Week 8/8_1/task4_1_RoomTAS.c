@@ -9,17 +9,18 @@
 
 #include <stdlib.h>
 
-#include <unistd.h>  // for sleep()
+#include <unistd.h> // for sleep()
 
 #include <stdbool.h>
 
 pthread_mutex_t lock;
 bool flag = false;
 
-void* urgent(void* param);    /* threads call this function */
-void* interrupt(void* param); /* threads call this function */
+void *urgent(void *param);    /* threads call this function */
+void *interrupt(void *param); /* threads call this function */
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[])
+{
   pthread_t tid[2];    /* the thread identifier */
   pthread_attr_t attr; /* set of thread attributes */
   /* set the default attributes of the thread */
@@ -29,7 +30,8 @@ int main(int argc, char* argv[]) {
   pthread_create(&tid[0], &attr, urgent, argv[1]);
   pthread_create(&tid[1], &attr, interrupt, argv[1]);
   /* wait for the thread to exit */
-  for (int i = 0; i < 2; i++) {
+  for (int i = 0; i < 2; i++)
+  {
     pthread_join(tid[i], NULL);
   }
   pthread_mutex_destroy(&lock);
@@ -37,9 +39,11 @@ int main(int argc, char* argv[]) {
 }
 
 /* The thread will execute in this function */
-void* urgent(void* param) {
+void *urgent(void *param)
+{
   pthread_mutex_lock(&lock);
-  if (!flag) {
+  if (!flag)
+  {
     flag = true;
     printf("\nA: Urgent in %d sec ...", atoi(param));
     sleep(atoi(param));
@@ -51,11 +55,14 @@ void* urgent(void* param) {
 }
 
 /* The thread will execute in this function */
-void* interrupt(void* param) {
-  sleep(1);  // come late.
-  while (true) {
+void *interrupt(void *param)
+{
+  sleep(1); // come late.
+  while (true)
+  {
     pthread_mutex_lock(&lock);
-    if (!flag) {
+    if (!flag)
+    {
       flag = true;
       printf("\nB: I'm in ....\n");
       pthread_mutex_unlock(&lock);

@@ -4,7 +4,8 @@
 
 int Func2(int n);
 
-int main() {
+int main()
+{
 	int n = 3;
 	int s = 0;
 
@@ -12,10 +13,12 @@ int main() {
 	printf("result = %d \n", s);
 }
 
-int Func2(int n) {
+int Func2(int n)
+{
 	int r = 0;
-	for(int i = 0; i < n; ++i) {
-		r += (i + 1)*(i + 1);
+	for (int i = 0; i < n; ++i)
+	{
+		r += (i + 1) * (i + 1);
 	}
 	return r;
 }

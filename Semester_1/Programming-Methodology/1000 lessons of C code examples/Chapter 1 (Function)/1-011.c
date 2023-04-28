@@ -4,7 +4,8 @@
 
 int Func11(int n);
 
-int main() {
+int main()
+{
 	int n = 3;
 	int s = 0;
 
@@ -12,11 +13,14 @@ int main() {
 	printf("result = %d \n", s);
 }
 
-int Func11(int n) {
+int Func11(int n)
+{
 	int r = 0;
-	for(int i = 0; i < n; ++i) {
+	for (int i = 0; i < n; ++i)
+	{
 		int t = 1;
-		for(int j = 0; j < i + 1; ++j) {
+		for (int j = 0; j < i + 1; ++j)
+		{
 			t *= (j + 1);
 		}
 		r += t;

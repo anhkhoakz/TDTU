@@ -2,20 +2,28 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 1234567890, t = n, _left, _right;
 
 	_left = _right = 0;
-	while(t) {
-		if(t >= 10) {
+	while (t)
+	{
+		if (t >= 10)
+		{
 			_right = t % 10;
 			_left = (t / 10) % 10;
-		} else {
+		}
+		else
+		{
 			break;
 		}
-		if(_left < _right) {
+		if (_left < _right)
+		{
 			t = t / 10;
-		} else {
+		}
+		else
+		{
 			printf("So %d khong tang dan tu trai qua phai.", n);
 			return 0;
 		}

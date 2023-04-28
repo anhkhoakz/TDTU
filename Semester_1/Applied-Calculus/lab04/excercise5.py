@@ -1,4 +1,4 @@
-import sympy as sp 
+import sympy as sp
 import math
 
 x = sp.symbols("x")
@@ -24,4 +24,3 @@ if lm == fx:
     print("Function is contious at", c)
 else:
     print("Function is not contious at", c)
-

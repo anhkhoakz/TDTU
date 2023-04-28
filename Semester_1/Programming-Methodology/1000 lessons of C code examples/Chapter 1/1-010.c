@@ -2,10 +2,12 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int s = 1, x = 2, n = 9;
 
-	for(int i = 1; i <= n; ++i) {
+	for (int i = 1; i <= n; ++i)
+	{
 		s = s * x;
 	}
 	printf("s = %d", s);

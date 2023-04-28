@@ -9,7 +9,8 @@ void DisplayArray(int a[], int n);
 int Max(int a[], int n);
 int Min(int a[], int n);
 
-int main() {
+int main()
+{
 	int const n = 10;
 	int a[n];
 	int max = 0;
@@ -25,36 +26,46 @@ int main() {
 	printf("Gia tri nho nhat cua array a: %d \n", min);
 }
 
-void InputArray(int a[], int n) {
+void InputArray(int a[], int n)
+{
 	int min = 0;
 	int max = 100;
 	srand(time(NULL));
-	for(int i = 0; i < n; ++i) {
+	for (int i = 0; i < n; ++i)
+	{
 		a[i] = min + rand() % (max - min + 1);
 	}
 }
 
-void DisplayArray(int a[], int n) {
-	for(int i = 0; i < n; ++i) {
+void DisplayArray(int a[], int n)
+{
+	for (int i = 0; i < n; ++i)
+	{
 		printf("%d  ", a[i]);
 	}
 	printf("\n");
 }
 
-int Max(int a[], int n) {
+int Max(int a[], int n)
+{
 	int max = a[0];
-	for(int i = 0; i < n; ++i) {
-		if(max < a[i]) {
+	for (int i = 0; i < n; ++i)
+	{
+		if (max < a[i])
+		{
 			max = a[i];
 		}
 	}
 	return max;
 }
 
-int Min(int a[], int n) {
+int Min(int a[], int n)
+{
 	int min = a[0];
-	for(int i = 0; i < n; ++i) {
-		if(min > a[i]) {
+	for (int i = 0; i < n; ++i)
+	{
+		if (min > a[i])
+		{
 			min = a[i];
 		}
 	}

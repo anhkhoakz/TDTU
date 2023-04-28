@@ -35,7 +35,7 @@ print("Derivative of g(t) =", dg)
 dg2 = sp.diff(g, t, 2)
 print("Second Derivative of g(t) =", dg2)
 
-#cau d
+# cau d
 k = (1 - z)/(2 * z)
 
 dk = sp.diff(k, z)

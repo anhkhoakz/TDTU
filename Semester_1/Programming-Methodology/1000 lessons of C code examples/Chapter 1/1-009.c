@@ -2,10 +2,12 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int s = 1, n = 9, i = 1;
 
-	while(i <= n) {
+	while (i <= n)
+	{
 		s = s * i;
 		++i;
 	}

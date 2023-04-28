@@ -7,20 +7,23 @@
 
 #include <stdlib.h>
 
-struct partition {
+struct partition
+{
   int start;
   int end;
 };
 
-void* songuyento(void* param);
+void *songuyento(void *param);
 
 struct partition A;
 struct partition B;
 
 // nguyên mẫu các hàm con
 
-int main(int argc, char* argv[]) {
-  if (argc < 2) {
+int main(int argc, char *argv[])
+{
+  if (argc < 2)
+  {
     printf("Usage: %s <number>\n", argv[0]);
     return 1;
   }
@@ -28,7 +31,8 @@ int main(int argc, char* argv[]) {
   // xác định n
   int n = atoi(argv[1]);
 
-  if (n < 2) {
+  if (n < 2)
+  {
     printf("So phai lon hon hoac bang 2\n");
     return 1;
   }
@@ -43,29 +47,34 @@ int main(int argc, char* argv[]) {
   /* set the default attributes of the thread */
   pthread_attr_init(&attr);
   /* create the thread */
-  pthread_create(&tid[0], &attr, songuyento, (void*)&A);
-  pthread_create(&tid[1], &attr, songuyento, (void*)&B);
+  pthread_create(&tid[0], &attr, songuyento, (void *)&A);
+  pthread_create(&tid[1], &attr, songuyento, (void *)&B);
   /* wait for the thread to exit */
   pthread_join(tid[0], NULL);
   pthread_join(tid[1], NULL);
 }
 
 /* The thread will execute in this function */
-void* songuyento(void* param) {
-  struct partition* X = (struct partition*)param;
+void *songuyento(void *param)
+{
+  struct partition *X = (struct partition *)param;
   int start = X->start;
   int end = X->end;
   int i, j;
   int is_prime;
-  for (i = start; i <= end; i++) {
+  for (i = start; i <= end; i++)
+  {
     is_prime = 1;
-    for (j = 2; j <= i / 2; j++) {
-      if (i % j == 0) {
+    for (j = 2; j <= i / 2; j++)
+    {
+      if (i % j == 0)
+      {
         is_prime = 0;
         break;
       }
     }
-    if (is_prime) {
+    if (is_prime)
+    {
       printf("%d ", i);
     }
   }

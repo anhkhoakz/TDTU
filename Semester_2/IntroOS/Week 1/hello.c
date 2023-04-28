@@ -3,7 +3,8 @@
 // Demo passing parameter though system call
 #include <stdio.h>
 
-int main() {
+int main()
+{
   printf("Hello, world!\n");
   return 0;
 }

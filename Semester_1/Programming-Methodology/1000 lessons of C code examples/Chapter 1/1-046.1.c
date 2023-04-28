@@ -2,21 +2,25 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n, n_count = 0, odd_count = 0, t;
 
-	do {
+	do
+	{
 		printf("Input n = ");
 		scanf("%d", &n);
-		if(n < 0)
+		if (n < 0)
 			printf("n >= 1, please input n again!");
-	} while(n < 0);
+	} while (n < 0);
 
 	t = n;
-	while(t != 0) {
+	while (t != 0)
+	{
 		int odd_n;
 		odd_n = t % 10;
-		if(odd_n % 2 != 0) {
+		if (odd_n % 2 != 0)
+		{
 			printf("%4d", odd_n);
 			++odd_count;
 		}

@@ -2,7 +2,7 @@
  * hello.c
  *
  * Kernel module that communicates with /proc file system.
- * 
+ *
  * The makefile must be modified to compile this program.
  * Change the line "simple.o" to "hello.o"
  *
@@ -27,10 +27,9 @@
 static ssize_t proc_read(struct file *file, char *buf, size_t count, loff_t *pos);
 
 static struct file_operations proc_ops = {
-        .owner = THIS_MODULE,
-        .read = proc_read,
+    .owner = THIS_MODULE,
+    .read = proc_read,
 };
-
 
 /* This function is called when the module is loaded. */
 static int proc_init(void)
@@ -43,24 +42,25 @@ static int proc_init(void)
 
         printk(KERN_INFO "/proc/%s created\n", PROC_NAME);
 
-	return 0;
+        return 0;
 }
 
 /* This function is called when the module is removed. */
-static void proc_exit(void) {
+static void proc_exit(void)
+{
 
         // removes the /proc/hello entry
         remove_proc_entry(PROC_NAME, NULL);
 
-        printk( KERN_INFO "/proc/%s removed\n", PROC_NAME);
+        printk(KERN_INFO "/proc/%s removed\n", PROC_NAME);
 }
 
 /**
  * This function is called each time the /proc/hello is read.
- * 
+ *
  * This function is called repeatedly until it returns 0, so
  * there must be logic that ensures it ultimately returns 0
- * once it has collected the data that is to go into the 
+ * once it has collected the data that is to go into the
  * corresponding /proc file.
  *
  * params:
@@ -76,7 +76,8 @@ static ssize_t proc_read(struct file *file, char __user *usr_buf, size_t count, 
         char buffer[BUFFER_SIZE];
         static int completed = 0;
 
-        if (completed) {
+        if (completed)
+        {
                 completed = 0;
                 return 0;
         }
@@ -91,10 +92,9 @@ static ssize_t proc_read(struct file *file, char __user *usr_buf, size_t count, 
         return rv;
 }
 
-
 /* Macros for registering module entry and exit points. */
-module_init( proc_init );
-module_exit( proc_exit );
+module_init(proc_init);
+module_exit(proc_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Hello Module");

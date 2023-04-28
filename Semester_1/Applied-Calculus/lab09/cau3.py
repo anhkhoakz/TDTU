@@ -1,4 +1,4 @@
-# Exercise 3: Given f(x) over a closed interval [a, b], 
+# Exercise 3: Given f(x) over a closed interval [a, b],
 # find the absolute maximum and the absolute minimum
 # for the following cases:
 
@@ -17,7 +17,6 @@ def absolute_min_max(f, start, end):
             critical_values.remove(x_c)
 
     critical_values.extend([start, end])
-
 
     y_values = []
 

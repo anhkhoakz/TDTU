@@ -4,11 +4,13 @@ import sympy as sp
 x = sp.symbols("x")
 # y = f'(a)(x - a) + f(a)
 
-def lineTangent (f, a):
+
+def lineTangent(f, a):
     df = sp.diff(f, x)
-    slope = df.subs(x, a) # slope = f'(a)
-    y_tangentLine = slope * (x - a) + f.subs(x, a) # y = f'(a)(x - a) + f(a)
+    slope = df.subs(x, a)  # slope = f'(a)
+    y_tangentLine = slope * (x - a) + f.subs(x, a)  # y = f'(a)(x - a) + f(a)
     sp.plot(f, y_tangentLine, (x, -5, 5))
+
 
 # a
 f = x * x + 1
@@ -35,7 +37,7 @@ f = x * x * x + 3 * x
 a = 1
 lineTangent(f, a)
 # g
-f = 8 / ((x - 2) ** (1/2)) 
+f = 8 / ((x - 2) ** (1/2))
 a = 6
 lineTangent(f, a)
 # h

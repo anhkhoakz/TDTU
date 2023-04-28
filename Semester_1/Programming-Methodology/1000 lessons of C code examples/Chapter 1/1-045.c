@@ -2,10 +2,12 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 12345, s = 1, t = n;
 
-	while(t != 0) {
+	while (t != 0)
+	{
 		s = s * (t % 10);
 		t = t / 10;
 	}

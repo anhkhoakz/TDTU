@@ -3,11 +3,13 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() {
+int main()
+{
     float s = 0, m = 1;
     int x = 2, n = 3;
 
-    for(int i = 1; i <= n; ++i) {
+    for (int i = 1; i <= n; ++i)
+    {
         m = m * x;
         s = sqrt(m + s);
     }

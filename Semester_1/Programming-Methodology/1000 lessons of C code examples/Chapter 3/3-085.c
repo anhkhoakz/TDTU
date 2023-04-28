@@ -2,13 +2,15 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int t;
 
 	printf("Nhap thang: ");
 	fflush(stdout);
 	scanf("%d", &t);
-	switch(t) {
+	switch (t)
+	{
 	case 1:
 	case 2:
 	case 3:

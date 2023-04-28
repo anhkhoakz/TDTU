@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	float a, b, x;
 	printf("Nhap a: ");
 	fflush(stdout);
@@ -11,13 +12,19 @@ int main() {
 	fflush(stdout);
 	scanf("%f", &b);
 
-	if(a == 0) {
-		if(b == 0) {
+	if (a == 0)
+	{
+		if (b == 0)
+		{
 			printf("PT co vo so nghiem. \n");
-		} else {
+		}
+		else
+		{
 			printf("PT vo nghiem. \n");
 		}
-	} else {
+	}
+	else
+	{
 		x = -b / a;
 		printf("PT co nghiem x = %f \n", x);
 	}

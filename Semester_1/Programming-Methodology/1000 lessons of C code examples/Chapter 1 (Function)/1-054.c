@@ -5,7 +5,8 @@
 int MinCharN(int n);
 int Func54(int n);
 
-int main() {
+int main()
+{
 	int n = 121701;
 
 	printf("n = %d \n", n);
@@ -13,14 +14,17 @@ int main() {
 	printf("Chu so nho nhat cua n lap lai %d lan. \n", Func54(n));
 }
 
-int MinCharN(int n) {
+int MinCharN(int n)
+{
 	int min = 10;
 	int t = n;
 	int r = 0;
 
-	while(t > 0) {
+	while (t > 0)
+	{
 		r = t % 10;
-		if(min > r) {
+		if (min > r)
+		{
 			min = r;
 		}
 		t = t / 10;
@@ -28,23 +32,28 @@ int MinCharN(int n) {
 	return min;
 }
 
-int Func54(int n) {
+int Func54(int n)
+{
 	int count = 0;
 	int min = 10;
 	int t = n;
 	int r = 0;
 
-	while(t > 0) {
+	while (t > 0)
+	{
 		r = t % 10;
-		if(min > r) {
+		if (min > r)
+		{
 			min = r;
 		}
 		t = t / 10;
 	}
 	t = n;
-	while(t > 0) {
+	while (t > 0)
+	{
 		r = t % 10;
-		if(min == r) {
+		if (min == r)
+		{
 			++count;
 		}
 		t = t / 10;

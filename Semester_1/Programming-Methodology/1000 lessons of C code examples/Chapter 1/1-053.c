@@ -2,20 +2,23 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 2953495, t = n, max = 0, max_count = 0, i;
 
-	while(t) {
+	while (t)
+	{
 		i = t % 10;
-		if(i == max)
+		if (i == max)
 			++max_count;
-		if(i > max) {
+		if (i > max)
+		{
 			max = i;
 			max_count = 1;
 		}
 		t = t / 10;
 	}
 
-  	printf("Chu so lon nhat cua %d: %d \n", n, max);
-  	printf("Chu so lon nhat, so %d lap lai %d lan. \n", max, max_count);
+	printf("Chu so lon nhat cua %d: %d \n", n, max);
+	printf("Chu so lon nhat, so %d lap lai %d lan. \n", max, max_count);
 }

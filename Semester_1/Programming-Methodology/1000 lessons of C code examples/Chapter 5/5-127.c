@@ -8,9 +8,10 @@
 void InputArray(int a[], int n);
 void DisplayArray(int a[], int n);
 void BubleSort(int a[], int n);
-void Swap(int * a, int * b);
+void Swap(int *a, int *b);
 
-int main() {
+int main()
+{
 	int const n = 10;
 	int a[n];
 
@@ -22,32 +23,41 @@ int main() {
 	DisplayArray(a, n);
 }
 
-void InputArray(int a[], int n) {
+void InputArray(int a[], int n)
+{
 	int min = 0;
 	int max = 100;
 	srand(time(NULL));
-	for(int i = 0; i < n; ++i) {
+	for (int i = 0; i < n; ++i)
+	{
 		a[i] = min + rand() % (max - min + 1);
 	}
 }
 
-void DisplayArray(int a[], int n) {
-	for(int i = 0; i < n; ++i) {
+void DisplayArray(int a[], int n)
+{
+	for (int i = 0; i < n; ++i)
+	{
 		printf("%d\t", a[i]);
 	}
 	printf("\n");
 }
 
-void Swap(int * a, int * b) {
+void Swap(int *a, int *b)
+{
 	int t = *a;
 	*a = *b;
 	*b = t;
 }
 
-void BubleSort(int a[], int n) {
-	for(int i = 0; i < n; ++i) {
-		for(int j = n - 1; j > i; --j) {
-			if(a[j] < a[j - 1]) {
+void BubleSort(int a[], int n)
+{
+	for (int i = 0; i < n; ++i)
+	{
+		for (int j = n - 1; j > i; --j)
+		{
+			if (a[j] < a[j - 1])
+			{
 				Swap(a + j, a + j - 1);
 			}
 		}

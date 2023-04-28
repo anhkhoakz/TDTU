@@ -2,11 +2,13 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 123450089, t = n;
 
 	printf("So nghich dao cua %d la: ", n);
-	do {
+	do
+	{
 		printf("%d", t % 10);
-	} while(t = t / 10);
+	} while (t = t / 10);
 }

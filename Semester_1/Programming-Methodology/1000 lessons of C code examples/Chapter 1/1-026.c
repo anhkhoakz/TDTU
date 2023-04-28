@@ -2,11 +2,14 @@
 
 #include <stdio.h>
 
-int main() {
-	int n = 95, s = 1;
+int main()
+{
+    int n = 95, s = 1;
 
-    for(int i = 1; i <= n; i += 2) {
-        if(n % i == 0) {
+    for (int i = 1; i <= n; i += 2)
+    {
+        if (n % i == 0)
+        {
             s = s * i;
         }
     }

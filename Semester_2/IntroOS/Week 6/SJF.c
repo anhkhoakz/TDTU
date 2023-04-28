@@ -6,13 +6,15 @@
 
 extern int process;
 
-void * FCFS(void * param) {
+void *FCFS(void *param)
+{
   int t_wait = 0, t_taround = 0;
   int time = 0;
-  //SORTING ARRIVAL TIME
-  for (int i = 0; i < process; i++) {
-    run( & task[i], time, task[i].burst); //Run from time to time+burst
-    time += task[i].burst; //moving to next P
+  // SORTING ARRIVAL TIME
+  for (int i = 0; i < process; i++)
+  {
+    run(&task[i], time, task[i].burst); // Run from time to time+burst
+    time += task[i].burst;              // moving to next P
     t_wait += time - task[i].burst - task[i].arrival;
     t_taround += time - task[i].arrival;
   }

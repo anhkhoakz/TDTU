@@ -5,7 +5,8 @@
 int MaxCharN(int n);
 int Func53(int n);
 
-int main() {
+int main()
+{
 	int n = 828738;
 
 	printf("n = %d \n", n);
@@ -13,14 +14,17 @@ int main() {
 	printf("Chu so lon nhat cua n lap lai %d lan. \n", Func53(n));
 }
 
-int MaxCharN(int n) {
+int MaxCharN(int n)
+{
 	int max = -1;
 	int t = n;
 	int r = 0;
 
-	while(t > 0) {
+	while (t > 0)
+	{
 		r = t % 10;
-		if(max < r) {
+		if (max < r)
+		{
 			max = r;
 		}
 		t = t / 10;
@@ -28,23 +32,28 @@ int MaxCharN(int n) {
 	return max;
 }
 
-int Func53(int n) {
+int Func53(int n)
+{
 	int count = 0;
 	int max = -1;
 	int t = n;
 	int r = 0;
 
-	while(t > 0) {
+	while (t > 0)
+	{
 		r = t % 10;
-		if(max < r) {
+		if (max < r)
+		{
 			max = r;
 		}
 		t = t / 10;
 	}
 	t = n;
-	while(t > 0) {
+	while (t > 0)
+	{
 		r = t % 10;
-		if(max == r) {
+		if (max == r)
+		{
 			++count;
 		}
 		t = t / 10;

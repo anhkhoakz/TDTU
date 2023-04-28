@@ -4,7 +4,8 @@
 
 long Tong(int n);
 
-int main() {
+int main()
+{
 	int n = 0;
 	long kq = 0;
 
@@ -17,9 +18,11 @@ int main() {
 	printf("kq = %ld", kq);
 }
 
-long Tong(int n) {
+long Tong(int n)
+{
 	long s = 0;
-	for(int i = 0; i < n; ++i) {
+	for (int i = 0; i < n; ++i)
+	{
 		s = s + (i + 1);
 	}
 	return s;

@@ -2,11 +2,13 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 123456789, odd_count = 0, t = n;
 
-	while(t != 0) {
-		if((t % 10) % 2 != 0) 
+	while (t != 0)
+	{
+		if ((t % 10) % 2 != 0)
 			++odd_count;
 		t = t / 10;
 	}

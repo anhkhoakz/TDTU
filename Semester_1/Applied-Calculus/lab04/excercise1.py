@@ -5,9 +5,11 @@ x = sp.symbols('x')
 
 # inf la vo cung
 
+
 def limitFunc(fx, x1):
     lim = sp.limit(fx, x, x1)
     print('Limit =', str(lim))
+
 
 print('Cau A')
 limitFunc(abs(x**2-x-7), 3)
@@ -16,7 +18,7 @@ print('Cau B')
 limitFunc((abs(x-1))/(x**2-1), 1)
 
 print('Cau C')
-limitFunc(math.e** (1/x), 1)
+limitFunc(math.e ** (1/x), 1)
 
 print('Cau D')
 limitFunc((x**4 - 16)/(x-2), 2)

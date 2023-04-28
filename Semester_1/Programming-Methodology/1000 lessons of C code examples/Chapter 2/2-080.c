@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int i, n;
 	float s, x, m, t;
 
@@ -14,7 +15,8 @@ int main() {
 	i = 1;
 	m = 0;
 
-	while(i <= n) {
+	while (i <= n)
+	{
 		m = m + i;
 		t = t * x;
 		s = s + t / m;

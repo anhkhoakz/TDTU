@@ -6,7 +6,8 @@
 #define TASK_H
 
 // representation of a task
-typedef struct task {
+typedef struct task
+{
     char *name;
     int tid;
     int priority;
@@ -16,15 +17,15 @@ typedef struct task {
 
 #endif
 
-#include<pthread.h>
+#include <pthread.h>
 
-#include<stdio.h>
+#include <stdio.h>
 
-#include<stdlib.h>
+#include <stdlib.h>
 
 #include <string.h>
 
-/* gettimeofday */ #include <sys/time.h>
+/* gettimeofday */ #include <sys / time.h>
 
 /* clock */ #include <time.h>
 
@@ -35,9 +36,8 @@ typedef struct task {
 #include <sys/syscall.h>
 
 #include <unistd.h>
-#define SIZE    100
+#define SIZE 100
 
 Task task[SIZE];
-void * FCFS(void * param);
+void *FCFS(void *param);
 void run(Task *task, int start, int slice);
-

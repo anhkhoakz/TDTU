@@ -2,24 +2,32 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 43021, t = n, _left, _right, _bool = 1;
 
 	_right = t % 10;
 	t = t / 10;
-	while(t) {
+	while (t)
+	{
 		_left = t % 10;
-		if(_left < _right) {
+		if (_left < _right)
+		{
 			_bool = 0;
 			break;
-		} else {
+		}
+		else
+		{
 			_right = _left;
 		}
 		t = t / 10;
 	}
-	if(_bool) {
+	if (_bool)
+	{
 		printf("So %d giam dan tu trai sang phai.", n);
-	} else {
+	}
+	else
+	{
 		printf("So %d KHONG giam dan tu trai sang phai.", n);
 	}
 }

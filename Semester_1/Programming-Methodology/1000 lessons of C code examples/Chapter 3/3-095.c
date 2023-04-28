@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int a, b, c;
 
 	printf("Nhap a: ");
@@ -17,11 +18,11 @@ int main() {
 	fflush(stdout);
 	scanf("%d", &c);
 
-	if(a < 0)
+	if (a < 0)
 		a = a * (-1);
-	if(b < 0)
+	if (b < 0)
 		b = b * (-1);
-	if(c < 0)
+	if (c < 0)
 		c = c * (-1);
 	printf("a: %d \nb: %d \nc: %d \n", a, b, c);
 }

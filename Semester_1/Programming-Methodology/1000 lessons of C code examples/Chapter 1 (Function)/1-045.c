@@ -5,7 +5,8 @@
 int NumberCharCount(int n); // Hàm đếm số lượng chữ số của n
 int Func45(int n);
 
-int main() {
+int main()
+{
 	int n = 12345;
 
 	printf("n = %d \n", n);
@@ -13,20 +14,24 @@ int main() {
 	printf("Tich cac chu so cua n: %d \n", Func45(n));
 }
 
-int NumberCharCount(int n) {
+int NumberCharCount(int n)
+{
 	int count = 0;
 	int t = n;
-	while(t > 0) {
+	while (t > 0)
+	{
 		++count;
 		t = t / 10;
 	}
 	return count;
 }
 
-int Func45(int n) {
+int Func45(int n)
+{
 	int s = 1;
 	int t = n;
-	while(t > 0) {
+	while (t > 0)
+	{
 		s *= t % 10;
 		t = t / 10;
 	}

@@ -2,19 +2,24 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 8;
 	int t = 1;
 
 	printf("n = %d \n", n);
 
-	do {
+	do
+	{
 		t = t * 2;
-	} while(t < n);
+	} while (t < n);
 
-	if(t == n) {
+	if (t == n)
+	{
 		printf("n co danh 2^k \n");
-	} else {
+	}
+	else
+	{
 		printf("n khong co danh 2^k \n");
 	}
 }

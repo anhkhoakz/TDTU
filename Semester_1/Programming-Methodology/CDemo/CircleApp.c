@@ -2,7 +2,7 @@
 #include <math.h>
 
 #include <stdbool.h>
- 
+
 // function to check if three sider form a triangle or not
 bool checkValidity(int a, int b, int c)
 {
@@ -12,9 +12,9 @@ bool checkValidity(int a, int b, int c)
     return true;
 }
 
-int main(void){
-	bool result = checkValidity(3, 4, 100);
-	
-	printf("Result %d", result);
-	
+int main(void)
+{
+    bool result = checkValidity(3, 4, 100);
+
+    printf("Result %d", result);
 }

@@ -1,5 +1,6 @@
-# include <stdio.h>
-int main(){
+#include <stdio.h>
+int main()
+{
 	printf("Ten: Nguyen Huynh Anh Khoa\nMSSV: 522H0046\n");
 	int a, b;
 	printf("Input 2 integer numbers:\n");

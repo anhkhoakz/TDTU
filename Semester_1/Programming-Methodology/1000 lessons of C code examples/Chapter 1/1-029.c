@@ -2,13 +2,17 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 13, max = 1;
 
-	for(int i = 1; i <= n; i += 2) {
-		if(n % i == 0) {
+	for (int i = 1; i <= n; i += 2)
+	{
+		if (n % i == 0)
+		{
 			printf("%4d", i);
-			if(i > max) {
+			if (i > max)
+			{
 				max = i;
 			}
 		}

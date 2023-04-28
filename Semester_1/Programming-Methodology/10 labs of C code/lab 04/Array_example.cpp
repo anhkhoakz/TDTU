@@ -11,101 +11,100 @@
 10. Tim so lon nhat
 */
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 #define MAX 100
 void input(int a[], int &n)
 {
-	//nhap n
+	// nhap n
 	printf("Nhap so phan tu cho mang:");
-	scanf("%d",&n);
+	scanf("%d", &n);
 	int i;
-	for(i=0; i<n; i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("Nhap phan tu thu %d:",i);
-		scanf("%d",&a[i]);
+		printf("Nhap phan tu thu %d:", i);
+		scanf("%d", &a[i]);
 	}
 }
 void random(int a[], int &n)
 {
-	//nhap n
+	// nhap n
 	printf("Nhap so phan tu cho mang:");
-	scanf("%d",&n);
+	scanf("%d", &n);
 	int i;
 	//[minN,maxN]
-	int minN=5, maxN=10;
-	for(i=0; i<n; i++)
+	int minN = 5, maxN = 10;
+	for (i = 0; i < n; i++)
 	{
-		//a[i]=rand()%10;
+		// a[i]=rand()%10;
 		a[i] = minN + rand() % (maxN + 1 - minN);
 	}
 }
 void output(int a[], int n)
-{	
+{
 	int i;
-	for(i=0; i<n; i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%d\t",a[i]);
-		
+		printf("%d\t", a[i]);
 	}
 }
-//dem chan
+// dem chan
 int demchan(int a[], int n)
 {
-	int d=0;
+	int d = 0;
 	int i;
-	for(i=0; i<n; i++)
+	for (i = 0; i < n; i++)
 	{
-		if(a[i]%2==0) // if(laSNT(a[i])==1)
-			d++; //s =s +a[i]
+		if (a[i] % 2 == 0) // if(laSNT(a[i])==1)
+			d++;		   // s =s +a[i]
 	}
 	return d;
 }
-//liet ke >x
+// liet ke >x
 void LKlonhonX(int a[], int n, int x)
 {
 	int i;
-	for(i=0; i<n; i++)
+	for (i = 0; i < n; i++)
 	{
-		if(a[i]>x)
-			printf("%d\t",a[i]);
+		if (a[i] > x)
+			printf("%d\t", a[i]);
 	}
 }
-//tim max
+// tim max
 int timmax(int a[], int n)
 {
-	int m=a[0], i;
-	for(i=1; i<n; i++)//
+	int m = a[0], i;
+	for (i = 1; i < n; i++) //
 	{
-		if(a[i]>m)
-			m=a[i];
+		if (a[i] > m)
+			m = a[i];
 	}
 	return m;
 }
 int kiemtrachan(int a[], int n)
 {
-	//1:co - 0: ko co
+	// 1:co - 0: ko co
 	int i;
-	for(i=0; i<n; i++)
-	{	
-		if(a[i]%2==0)
+	for (i = 0; i < n; i++)
+	{
+		if (a[i] % 2 == 0)
 			return 1;
 	}
 	return 0;
 }
 int main()
 {
-	//minN + rand() % (maxN + 1 - minN);
+	// minN + rand() % (maxN + 1 - minN);
 	/* Khoi tao bo sinh so ngau nhien */
-   	srand((int) time(0));
+	srand((int)time(0));
 	printf("Hello\n");
 	int a[MAX];
 	int n;
-	//input(a,n);
-	random(a,n);
+	// input(a,n);
+	random(a, n);
 	printf("Mang:");
-	output(a,n);
+	output(a, n);
 	/*
 	printf("\n1. Mang co %d so chan",demchan(a,n));
 	int x;
@@ -115,7 +114,7 @@ int main()
 	LKlonhonX(a,n,x);
 	printf("\n3. Phan tu lon nhat la %d", timmax(a,n));
 	*/
-	if(kiemtrachan(a,n)==1)
+	if (kiemtrachan(a, n) == 1)
 		printf("dsdsd");
 	else
 		printf("ko co");

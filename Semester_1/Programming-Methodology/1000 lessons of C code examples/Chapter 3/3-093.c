@@ -2,31 +2,43 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n, d;
 
 	printf("Nhap n: ");
 	fflush(stdout);
 	scanf("%d", &n);
 
-	if(n < 2) {
+	if (n < 2)
+	{
 		printf("n khong phai so nguyen to. \n");
-	} else {
-		if(n == 2) {
+	}
+	else
+	{
+		if (n == 2)
+		{
 			printf("n la so nguyen to. \n");
-		} else {
-			if(n % 2 == 0) {
+		}
+		else
+		{
+			if (n % 2 == 0)
+			{
 				printf("n khong phai la so nguyen to. \n");
-			} else {
+			}
+			else
+			{
 				d = 3;
-				while(d <= n) {
-					if(n % d == 0)
+				while (d <= n)
+				{
+					if (n % d == 0)
 						break;
 					d += 2;
 				}
-				if(n == d)
+				if (n == d)
 					printf("n la so nguyen to. \n");
-				else {
+				else
+				{
 					printf("n khong phai so nguyen to. \n");
 					printf("n chia het cho %d \n", d);
 				}

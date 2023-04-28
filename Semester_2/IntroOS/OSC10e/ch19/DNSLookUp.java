@@ -1,3 +1,4 @@
+
 /**
  * A simple program demonstrating DNS lookup
  *
@@ -8,8 +9,7 @@
 import java.io.*;
 import java.net.*;
 
-public class DNSLookUp
-{
+public class DNSLookUp {
 	public static void main(String[] args) {
 		if (args.length != 1) {
 			System.err.println("Usage: java DNSLookUp <IP name>");
@@ -21,10 +21,8 @@ public class DNSLookUp
 		try {
 			hostAddress = InetAddress.getByName(args[0]);
 			System.out.println(hostAddress.getHostAddress());
-		}
-		catch (UnknownHostException uhe) {
+		} catch (UnknownHostException uhe) {
 			System.err.println("Unknown host: " + args[0]);
 		}
 	}
 }
-

@@ -2,10 +2,12 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 900001, revesed_n = 0, t = n;
 
-	while(t) {
+	while (t)
+	{
 		revesed_n = (t % 10) + revesed_n * 10;
 		t = t / 10;
 	}

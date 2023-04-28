@@ -11,13 +11,15 @@ void Nhap();
 void Xuly();
 void Xuat();
 
-int main() {
+int main()
+{
 	Nhap();
 	Xuly();
 	Xuat();
 }
 
-void Nhap() {
+void Nhap()
+{
 	printf("Nhap ho ten: ");
 	fflush(stdout);
 	gets(hoten);
@@ -29,10 +31,12 @@ void Nhap() {
 	scanf("%d", &van);
 }
 
-void Xuly() {
+void Xuly()
+{
 	dtb = (toan + van) / 2;
 }
 
-void Xuat() {
+void Xuat()
+{
 	printf("Diem trung binh: %2f \n", dtb);
 }

@@ -2,11 +2,12 @@
 
 #include <stdio.h>
 
-void Nhap(char ht[], int * t, int * v);
-void Xuly(int t, int v, float * dtb);
+void Nhap(char ht[], int *t, int *v);
+void Xuly(int t, int v, float *dtb);
 void Xuat(char ht[], int t, int v, float dtb);
 
-int main() {
+int main()
+{
 	char hoten[31];
 	int toan;
 	int van;
@@ -17,7 +18,8 @@ int main() {
 	Xuat(hoten, toan, van, dtb);
 }
 
-void Nhap(char ht[], int * t, int * v) {
+void Nhap(char ht[], int *t, int *v)
+{
 	printf("Nhap ho ten: ");
 	fflush(stdout);
 	gets(ht);
@@ -29,11 +31,13 @@ void Nhap(char ht[], int * t, int * v) {
 	scanf("%d", v);
 }
 
-void Xuly(int t, int v, float * dtb) {
+void Xuly(int t, int v, float *dtb)
+{
 	*dtb = (t + v) / 2;
 }
 
-void Xuat(char ht[], int t, int v, float dtb) {
+void Xuat(char ht[], int t, int v, float dtb)
+{
 	printf("Ho ten: %s \n", ht);
 	printf("Toan: %d \n", t);
 	printf("Van: %d \n", v);

@@ -2,11 +2,13 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 589126, t = n, min = n % 10;
 
-	while (t) {
-		if(min > t % 10)
+	while (t)
+	{
+		if (min > t % 10)
 			min = t % 10;
 		t = t / 10;
 	}

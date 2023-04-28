@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int a, b;
 
 	printf("Nhap a: ");
@@ -13,10 +14,14 @@ int main() {
 	fflush(stdout);
 	scanf("%d", &b);
 
-	while(a != b ) {
-		if(a > b) {
+	while (a != b)
+	{
+		if (a > b)
+		{
 			a = a - b;
-		} else {
+		}
+		else
+		{
 			b = b - a;
 		}
 	}

@@ -7,28 +7,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char ** argv) {
+int main(int argc, char **argv)
+{
   int n;
-  if(argc != 2 ) 
+  if (argc != 2)
   {
     printf("Number of arguments wrong (case b.)");
-     return -1;
+    return -1;
   }
-  
+
   else
   {
     n = atoi(argv[1]);
-    if (n <= 0) {
+    if (n <= 0)
+    {
       printf("Day khong phai la so nguyen duong\n");
       return 0;
     }
-	int i, sum = 0;
-	for (i = 0; i <= n; i++){
-		sum +=i;
-	}
+    int i, sum = 0;
+    for (i = 0; i <= n; i++)
+    {
+      sum += i;
+    }
     printf("\nSum = %d", sum);
   }
-  
+
   return 0;
 }
-

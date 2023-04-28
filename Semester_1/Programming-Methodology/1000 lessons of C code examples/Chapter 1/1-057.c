@@ -2,11 +2,14 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 2480, t = n;
 
-	while(t) {
-		if((t % 10) % 2 != 0) {
+	while (t)
+	{
+		if ((t % 10) % 2 != 0)
+		{
 			printf("So %d co so le.", n);
 			return 0;
 		}

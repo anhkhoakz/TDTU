@@ -1,33 +1,33 @@
-# include <stdio.h>
-# include <stdlib.h>
-# include <math.h>
-# include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
 
-# define Max 1000
+#define Max 1000
 
-void userInput(int [], int *);
-void userOutput(int [], int);
-int isPrimeNumber(int );
-void printPrimeNumber(int [], int );
-int isDivided(int , int);
+void userInput(int[], int *);
+void userOutput(int[], int);
+int isPrimeNumber(int);
+void printPrimeNumber(int[], int);
+int isDivided(int, int);
 // void k_valueInput(int );
-int countDivided(int [], int, int);
-int isSquareNumber(int );
-int sumSquareNumber(int [], int );
-int isNegative(int );
-void printNegatives (int [], int);
-int minNum(int [], int);
+int countDivided(int[], int, int);
+int isSquareNumber(int);
+int sumSquareNumber(int[], int);
+int isNegative(int);
+void printNegatives(int[], int);
+int minNum(int[], int);
 int isAllEvens(int[], int);
-void printAllEvens(int [], int);
-int maxNum(int [], int );
-int mostAppear(int [], int );
-int greatEven(int [], int);
-void sortArray(int [], int);
-int countAppear(int [], int , int);
+void printAllEvens(int[], int);
+int maxNum(int[], int);
+int mostAppear(int[], int);
+int greatEven(int[], int);
+void sortArray(int[], int);
+int countAppear(int[], int, int);
 
 int main()
 {
-    srand( (int)time(0) );
+    srand((int)time(0));
     int n, a[Max];
     printf("Ho va ten: Nguyen Huynh Anh Khoa\tMSSV: 522H0046\n");
     userInput(a, &n);
@@ -48,14 +48,14 @@ int main()
     sortArray(a, n);
     printf("\nPhan tu xuat hien nhieu nhat: %d\n", mostAppear(a, n));
     printf("\nPhan tu %d xuat hien %d lan\n\n", mostAppear(a, n), countAppear(a, n, mostAppear(a, n)));
-    
+
     return 0;
 }
 
 void userInput(int a[], int *n)
 {
     do
-    {   
+    {
         int i;
         printf("Vui long nhap vao mot so nguyen duong: ");
         scanf("%d", n);
@@ -67,15 +67,14 @@ void userInput(int a[], int *n)
         if (*n < 1 || *n > 999)
         {
             printf("Vui long nhap vao con so hop le!\n");
-        } 
-    }
-    while (*n < 1 || *n > 999);
+        }
+    } while (*n < 1 || *n > 999);
 }
 
 // void userInput(int a[], int *n)
 // {
 //     do
-//     {   
+//     {
 //         int i;
 //         int minRand = -10000, maxRand = 10000;
 //         printf("\nVui long nhap vao mot so nguyen duong: ");
@@ -87,7 +86,7 @@ void userInput(int a[], int *n)
 //         if (*n <= 0 || *n >= 1000)
 //         {
 //             printf("Vui long nhap vao con so hop le!\n");
-//         } 
+//         }
 //     }
 //     while (*n <= 0 || *n >= 1000);
 // }
@@ -96,13 +95,11 @@ void userOutput(int a[], int n)
 {
     int i;
     printf("\nCac phan tu trong mang:\n");
-    for (i = 0; i < n; i ++)
+    for (i = 0; i < n; i++)
     {
         printf("%d\t", a[i]);
     }
 }
-
-
 
 int isPrimeNumber(int n)
 /*
@@ -118,7 +115,7 @@ Kiem tra so nguyen to: chia het cho 1 va chinh no
     else
     {
         int i;
-        for (i = 3; i < sqrt((float)n); i+=2)
+        for (i = 3; i < sqrt((float)n); i += 2)
         {
             if (n % i == 0)
                 return 0;
@@ -153,13 +150,13 @@ Kiem tra n co chia het cho k khong
     return 0;
 }
 
-int countDivided (int a[], int n, int k)
+int countDivided(int a[], int n, int k)
 {
     int i, count = 0;
     for (i = 0; i < n; i++)
     {
         if (isDivided(a[i], k) == 1)
-            count ++;
+            count++;
     }
     return count;
 }
@@ -193,7 +190,7 @@ int isNegative(int n)
     return 0;
 }
 
-void printNegatives (int a[], int n)
+void printNegatives(int a[], int n)
 // Liệt kê các phần tử âm trong A
 {
     printf("\nCac so am trong mang:\n");
@@ -233,10 +230,12 @@ int isAllEvens(int a[], int n)
 void printAllEvens(int a[], int n)
 {
     int i;
-    if (isAllEvens(a, n) == 1){
+    if (isAllEvens(a, n) == 1)
+    {
         printf("Mang toan chan\n");
     }
-    else{
+    else
+    {
         printf("Mang ton tai so le\n");
     }
 }

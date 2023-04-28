@@ -9,7 +9,8 @@ void InputArray(int a[], int n);
 void DisplayArray(int a[], int n);
 _Bool Func124(int a[], int n);
 
-int main() {
+int main()
+{
 	int const n = 20;
 	int a[n];
 	_Bool b;
@@ -18,33 +19,43 @@ int main() {
 	DisplayArray(a, n);
 
 	b = Func124(a, n);
-	if(b == true) {
+	if (b == true)
+	{
 		printf("Ton tai gia chan nho hon 2004. \n");
-	} else {
+	}
+	else
+	{
 		printf("Khong ton tai gia tri chan nho hon 2004. \n");
 	}
 }
 
-void InputArray(int a[], int n) {
+void InputArray(int a[], int n)
+{
 	int min = 1000;
 	int max = 3000;
 	srand(time(NULL));
-	for(int i = 0; i < n; ++i) {
+	for (int i = 0; i < n; ++i)
+	{
 		a[i] = min + rand() % (max - min + 1);
 	}
 }
 
-void DisplayArray(int a[], int n) {
-	for(int i = 0; i < n; ++i) {
+void DisplayArray(int a[], int n)
+{
+	for (int i = 0; i < n; ++i)
+	{
 		printf("%d  ", a[i]);
 	}
 	printf("\n");
 }
 
-_Bool Func124(int a[], int n) {
+_Bool Func124(int a[], int n)
+{
 	_Bool b = false;
-	for(int i = 0; i < n; ++i) {
-		if(a[i] % 2 == 0 && a[i] < 2004) {
+	for (int i = 0; i < n; ++i)
+	{
+		if (a[i] % 2 == 0 && a[i] < 2004)
+		{
 			b = true;
 		}
 	}

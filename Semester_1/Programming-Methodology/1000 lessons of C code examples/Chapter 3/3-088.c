@@ -2,8 +2,10 @@
 
 #include <stdio.h>
 
-int main() {
-	for(int i = 'a'; i <= 'z'; ++i) {
+int main()
+{
+	for (int i = 'a'; i <= 'z'; ++i)
+	{
 		printf("%2c", i);
 	}
 }

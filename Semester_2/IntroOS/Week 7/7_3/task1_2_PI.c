@@ -21,9 +21,10 @@
 int counter = 0;           /* this data is shared by the thread(s) */
 pthread_barrier_t barrier; /* barrier to synchronize all threads */
 
-void* runner(void* param); /* threads call this function */
+void *runner(void *param); /* threads call this function */
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[])
+{
   pthread_t tid[MAX_THREAD]; /* the thread identifier */
   pthread_attr_t attr;       /* set of thread attributes */
   pthread_attr_init(&attr);  /* set the default attributes of the thread */
@@ -46,7 +47,8 @@ int main(int argc, char* argv[]) {
   pthread_barrier_wait(&barrier);
 
   /* wait for all threads to finish before continuing */
-  for (int i = 0; i < n_thread; i++) pthread_join(tid[i], NULL);
+  for (int i = 0; i < n_thread; i++)
+    pthread_join(tid[i], NULL);
 
   gettimeofday(&endwatch, NULL);
   /* ### end of section to be measured ### */
@@ -62,7 +64,8 @@ int main(int argc, char* argv[]) {
 }
 
 /* The thread will execute in this function */
-void* runner(void* param) {
+void *runner(void *param)
+{
   srand((unsigned int)time(NULL));
   float x, y, distance;
   int a = atoi(param);
@@ -73,13 +76,15 @@ void* runner(void* param) {
   /* wait for all threads to reach the barrier before continuing */
   pthread_barrier_wait(&barrier);
 
-  int local_counter = 0;  // each thread's local counter
-  for (int i = 0; i < a; i++) {
+  int local_counter = 0; // each thread's local counter
+  for (int i = 0; i < a; i++)
+  {
     x = -1 + ((float)rand() / (float)(RAND_MAX)) * 2;
     y = -1 + ((float)rand() / (float)(RAND_MAX)) * 2;
 
     distance = sqrt(x * x + y * y);
-    if (distance <= 1.0) {
+    if (distance <= 1.0)
+    {
       local_counter++;
     }
   }

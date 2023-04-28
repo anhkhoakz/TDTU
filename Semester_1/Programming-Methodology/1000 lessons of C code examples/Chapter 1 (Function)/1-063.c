@@ -4,7 +4,8 @@
 
 int Func63(int a, int b);
 
-int main() {
+int main()
+{
 	int a = 0;
 	int b = 0;
 	int bcnn = 0;
@@ -15,23 +16,36 @@ int main() {
 	printf("BCNN cua a va b la: %d \n", bcnn);
 }
 
-int Func63(int a, int b) {
+int Func63(int a, int b)
+{
 	int bcnn = 0;
 	int big = 0;
 
-	if(a == 0 || b == 0) {
+	if (a == 0 || b == 0)
+	{
 		return 0;
-	} else if(a % b == 0 || b % a == 0) {
-		if(a > b) return a;
-		else return b;
-	} else {
-		if(a > b) {
+	}
+	else if (a % b == 0 || b % a == 0)
+	{
+		if (a > b)
+			return a;
+		else
+			return b;
+	}
+	else
+	{
+		if (a > b)
+		{
 			big = a;
-		} else {
+		}
+		else
+		{
 			big = b;
 		}
-		for(int i = big + 1; i <= a * b; ++i) {
-			if(i % a == 0 && i % b == 0) {
+		for (int i = big + 1; i <= a * b; ++i)
+		{
+			if (i % a == 0 && i % b == 0)
+			{
 				return i;
 			}
 		}

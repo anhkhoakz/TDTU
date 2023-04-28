@@ -2,19 +2,23 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n, s = 0, t;
 
-	do {
+	do
+	{
 		printf("Nhap n = ");
 		scanf("%d", &n);
-		if(n < 0) {
+		if (n < 0)
+		{
 			printf("n >= 1, nhap lai.\n");
-		} 
-	} while(n < 0);
+		}
+	} while (n < 0);
 
 	t = n;
-	while(t != 0) {
+	while (t != 0)
+	{
 		s = s + (t % 10);
 		t = t / 10;
 	}

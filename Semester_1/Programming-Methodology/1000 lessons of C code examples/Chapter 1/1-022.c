@@ -2,12 +2,15 @@
 
 #include <stdio.h>
 
-int main() {
-	int n = 27, s = 1;
+int main()
+{
+    int n = 27, s = 1;
 
     printf("Uoc so cua %d la: ", n);
-    for(int i = 1; i <= n; ++i) {
-        if(n % i == 0) {
+    for (int i = 1; i <= n; ++i)
+    {
+        if (n % i == 0)
+        {
             printf("%4d", i);
             s = s * i;
         }

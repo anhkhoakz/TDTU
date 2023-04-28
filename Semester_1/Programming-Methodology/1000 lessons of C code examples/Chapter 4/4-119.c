@@ -5,36 +5,48 @@
 int KT_SoNguyenTo(int x);
 void Func119(int n);
 
-int main() {
+int main()
+{
 	int n = 0;
 
 	printf("Nhap n: ");
-	//#ifdef DEBUG
+	// #ifdef DEBUG
 	fflush(stdout);
-	//#endif
+	// #endif
 	scanf("%d", &n);
 
 	printf("So nguyen to nho hon n: ");
 	Func119(n);
 }
 
-int KT_SoNguyenTo(int x) {
+int KT_SoNguyenTo(int x)
+{
 	int _bool = 1;
-	if(x < 2) {
+	if (x < 2)
+	{
 		_bool = 0;
-	} else {
-		if(x == 2) {
+	}
+	else
+	{
+		if (x == 2)
+		{
 			_bool = 1;
-		} else {
+		}
+		else
+		{
 			int d = 3;
-			while(d < x) {
-				if(x % d == 0)
+			while (d < x)
+			{
+				if (x % d == 0)
 					break;
 				d = d + 2;
 			}
-			if(d == x) {
+			if (d == x)
+			{
 				_bool = 1;
-			} else {
+			}
+			else
+			{
 				_bool = 0;
 			}
 		}
@@ -42,9 +54,12 @@ int KT_SoNguyenTo(int x) {
 	return _bool;
 }
 
-void Func119(int n) {
-	for(int i = 0; i < n; ++i) {
-		if(KT_SoNguyenTo(i + 1)) {
+void Func119(int n)
+{
+	for (int i = 0; i < n; ++i)
+	{
+		if (KT_SoNguyenTo(i + 1))
+		{
 			printf("%d  ", i + 1);
 		}
 	}

@@ -26,13 +26,14 @@ int count = 0; /* this data is shared by the thread(s) */
 int in = 0;
 int out = 0;
 int buffer[BUFFER_SIZE];
-void* producer(void* param); /* threads 0 call this function */
-void* consumer(void* param); /* threads 1 call this function */
-int main(int argc, char* argv[]) {
+void *producer(void *param); /* threads 0 call this function */
+void *consumer(void *param); /* threads 1 call this function */
+int main(int argc, char *argv[])
+{
   pthread_t tid[MAX_THREAD]; /* the thread identifier */
 
   struct sched_param sd;
-  sd.sched_priority = 50;  // Set real-time priority 50
+  sd.sched_priority = 50; // Set real-time priority 50
   sched_setscheduler(0, SCHED_RR, &sd);
   cpu_set_t set;
   CPU_ZERO(&set);
@@ -50,11 +51,13 @@ int main(int argc, char* argv[]) {
 }
 
 /* The thread will execute in this function */
-void* producer(void* param) {
+void *producer(void *param)
+{
   int i = 0, max = atoi(param);
-  for (int i = 0; i < max; i++) {
+  for (int i = 0; i < max; i++)
+  {
     while (count == BUFFER_SIZE)
-      ;  // do nothing
+      ; // do nothing
     buffer[in] = 1;
     printf("\nJust sent in = %d and count = %d.", in, count);
     in = (in + 1) % BUFFER_SIZE;
@@ -62,11 +65,13 @@ void* producer(void* param) {
   }
   pthread_exit(0);
 }
-void* consumer(void* param) {
+void *consumer(void *param)
+{
   int receive = 0;
-  while (1) {
+  while (1)
+  {
     while (count == 0)
-      ;  // do nothing
+      ; // do nothing
     receive += buffer[out];
     count--;
     printf("\nJust received = %d and count = %d.", receive, count);

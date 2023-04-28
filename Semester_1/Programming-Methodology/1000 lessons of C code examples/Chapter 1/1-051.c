@@ -2,11 +2,13 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 5208974, t = n, max = 0;
 
-	while(t) {
-		if(max < t % 10) 
+	while (t)
+	{
+		if (max < t % 10)
 			max = t % 10;
 		t = t / 10;
 	}

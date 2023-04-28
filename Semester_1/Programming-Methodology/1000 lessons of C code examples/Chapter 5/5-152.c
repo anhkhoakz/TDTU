@@ -9,7 +9,8 @@ void ArrayDisplay(int a[], int n);
 int KT_SoHoanThien(int n);
 int HoanThienNhoNhat(int a[], int n);
 
-int main() {
+int main()
+{
 	const int n = 10;
 	int a[n];
 	int d;
@@ -17,67 +18,84 @@ int main() {
 	ArrayInput(a, n);
 	ArrayDisplay(a, n);
 	d = HoanThienNhoNhat(a, n);
-	if(d == 0) {
+	if (d == 0)
+	{
 		printf("Khong co so hoan thien trong array a. \n");
-	} else {
+	}
+	else
+	{
 		printf("So hoan thien nho nhat trong array a: %d \n", d);
 	}
 }
 
-void ArrayInput(int a[], int n) {
+void ArrayInput(int a[], int n)
+{
 	int min = 1;
 	int max = 100;
 	srand(time(NULL));
-	for(int i = 0; i < n; ++i) {
+	for (int i = 0; i < n; ++i)
+	{
 		a[i] = min + rand() % (max - min + 1);
 	}
 }
 
-void ArrayDisplay(int a[], int n) {
-	for(int i = 0; i < n; ++i) {
+void ArrayDisplay(int a[], int n)
+{
+	for (int i = 0; i < n; ++i)
+	{
 		printf("%d\t", a[i]);
 	}
 	printf("\n");
 }
 
-int KT_SoHoanThien(int n) {
+int KT_SoHoanThien(int n)
+{
 	int s = 0;
-	for(int i = 1; i < n; ++i) {
-		if(n % i == 0)
+	for (int i = 1; i < n; ++i)
+	{
+		if (n % i == 0)
 			s += i;
 	}
-	if(s == n)
+	if (s == n)
 		return 1;
 	else
 		return 0;
 }
 
-int HoanThienNhoNhat(int a[], int n) {
+int HoanThienNhoNhat(int a[], int n)
+{
 	int count = 0;
 	int hoanThienMin;
-	for(int i = 0; i < n; ++i) {
-		if(KT_SoHoanThien(a[i])) {
+	for (int i = 0; i < n; ++i)
+	{
+		if (KT_SoHoanThien(a[i]))
+		{
 			++count;
 		}
 	}
-	if(count == 0) { // Không có số hoàn thiện trong array
+	if (count == 0)
+	{ // Không có số hoàn thiện trong array
 		return 0;
-	} else {
+	}
+	else
+	{
 		const int m = count;
 		int arrayHoanThien[m];
 		int j = 0;
-		for(int i = 0; i < n; ++i) {
-			if(KT_SoHoanThien(a[i])) {
+		for (int i = 0; i < n; ++i)
+		{
+			if (KT_SoHoanThien(a[i]))
+			{
 				arrayHoanThien[j] = a[i];
 				++j;
 			}
 		}
 		hoanThienMin = arrayHoanThien[0];
-		for(int i = 0; i < m; ++i) {
-			if(hoanThienMin > arrayHoanThien[i])
+		for (int i = 0; i < m; ++i)
+		{
+			if (hoanThienMin > arrayHoanThien[i])
 				hoanThienMin = arrayHoanThien[i];
 		}
 		return hoanThienMin;
 	}
 }
-

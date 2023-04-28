@@ -1,4 +1,4 @@
-# Exercise 2: Find the relative extrema using the second derivative test 
+# Exercise 2: Find the relative extrema using the second derivative test
 # for the following cases:
 
 import sympy as sp

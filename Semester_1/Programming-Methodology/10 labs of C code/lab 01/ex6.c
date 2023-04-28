@@ -1,6 +1,7 @@
-# include <stdio.h>
-# include <stdlib.h>
-int main(){
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
 	printf("Ten: Nguyen Huynh Anh Khoa\nMSSV: 522H0046\n");
 	printf("Enter a number:\n");
 	float a;

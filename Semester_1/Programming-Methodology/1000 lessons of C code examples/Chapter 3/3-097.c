@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int a, b, c;
 
 	printf("Nhap a: ");
@@ -17,15 +18,24 @@ int main() {
 	fflush(stdout);
 	scanf("%d", &c);
 
-	if(a == b && a == c) {
+	if (a == b && a == c)
+	{
 		printf("tam giac deu.");
-	} else {
-		if(a == b || b == c || a == c) {
+	}
+	else
+	{
+		if (a == b || b == c || a == c)
+		{
 			printf("tam giac can.");
-		} else {
-			if(a*a == b*b + c*c || b*b == a*a + c*c || c*c == a*a + b*b) {
+		}
+		else
+		{
+			if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b)
+			{
 				printf("tam giac vuong.");
-			} else {
+			}
+			else
+			{
 				printf("tam giac thuong.");
 			}
 		}

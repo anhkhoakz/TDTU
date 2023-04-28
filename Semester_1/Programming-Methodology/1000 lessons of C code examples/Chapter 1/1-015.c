@@ -2,11 +2,13 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	float s = 0;
 	int n = 3, t = 0;
 
-	for(int i = 1; i <= n; ++i) {
+	for (int i = 1; i <= n; ++i)
+	{
 		t = t + i;
 		s += 1.0 / t;
 	}

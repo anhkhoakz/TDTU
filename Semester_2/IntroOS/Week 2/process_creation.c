@@ -3,18 +3,22 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
-int main() {
+int main()
+{
     pid_t pid = fork();
 
-    if (pid == -1) {
+    if (pid == -1)
+    {
         printf("Failed to create child process.\n");
         exit(1);
     }
-    else if (pid == 0) {
+    else if (pid == 0)
+    {
         printf("Child process with ID %d created.\n", getpid());
         exit(0);
     }
-    else {
+    else
+    {
         wait(NULL);
         printf("Parent process with ID %d.\n", getpid());
         system("ps -ef");

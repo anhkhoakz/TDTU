@@ -2,16 +2,18 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n = 1593, t = n;
 
-	while(t) {
-		if((t % 10) % 2 == 0) {
+	while (t)
+	{
+		if ((t % 10) % 2 == 0)
+		{
 			printf("So %d co so chan.", n);
 			return 0;
 		}
 		t = t / 10;
 	}
 	printf("So %d toan so le.", n);
-
 }

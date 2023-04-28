@@ -1,4 +1,4 @@
-# Exercise 5: Write a program to implement Golden Search 
+# Exercise 5: Write a program to implement Golden Search
 # and apply to determinate minimum value of
 # and illustrate on the graph/ table for each iteration.
 import sympy as sp
@@ -10,8 +10,10 @@ x = sp.symbols("x")
 a, b, e = -2, 1, 0.3
 d = b - a
 
+
 def f(x):
     return x * x
+
 
 x_array = np.arange(a, b + 0.1, 0.1)
 y_array = list(map(f, x_array))

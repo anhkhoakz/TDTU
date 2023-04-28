@@ -12,7 +12,7 @@ second_derivative_f = sp.diff(f, x, 2)
 df_x = first_derivative_f.subs(x, x0)
 d2f_x = second_derivative_f.subs(x, x0)
 
-print(df_x, "----" , d2f_x)
+print(df_x, "----", d2f_x)
 m1 = sp.solve(df_x, m)
 m2 = sp.solve(d2f_x, m)
 

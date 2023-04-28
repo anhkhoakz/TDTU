@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n, s, i;
 
 	printf("Nhap n: ");
@@ -11,10 +12,11 @@ int main() {
 
 	s = 0;
 	i = 1;
-	for(;;) {
+	for (;;)
+	{
 		s = s + i;
 		i = i + 2;
-		if(i > n)
+		if (i > n)
 			break;
 	}
 	printf("Tong cac so le nho hon n: %d", s);

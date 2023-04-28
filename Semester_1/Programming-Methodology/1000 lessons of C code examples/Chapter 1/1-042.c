@@ -2,10 +2,12 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int n = 16, s = 0, k = 0;
 
-    while(s < n) {
+    while (s < n)
+    {
         ++k;
         s = s + k;
     }

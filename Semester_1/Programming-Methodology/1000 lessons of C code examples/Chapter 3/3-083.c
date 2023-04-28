@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	signed int a, b;
 
 	printf("Nhap a: ");
@@ -11,9 +12,12 @@ int main() {
 	printf("Nhap b: ");
 	fflush(stdout);
 	scanf("%d", &b);
-	if(a * b > 0) {
+	if (a * b > 0)
+	{
 		printf("Hai so a, b cung dau. \n");
-	} else {
+	}
+	else
+	{
 		printf("Hai so a, b khac dau. \n");
 	}
 }

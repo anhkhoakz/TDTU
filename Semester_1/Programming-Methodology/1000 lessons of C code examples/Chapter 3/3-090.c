@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	int n, m, s;
 
 	printf("Nhap n: ");
@@ -11,7 +12,8 @@ int main() {
 
 	s = 0;
 	m = 0;
-	while(s + m + 1 < n) {
+	while (s + m + 1 < n)
+	{
 		++m;
 		s = s + m;
 	}

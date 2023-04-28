@@ -5,7 +5,8 @@
 int Sumk(int k); // Hàm tính tổng từ 1 -> k
 int Func42(int n);
 
-int main() {
+int main()
+{
 	int n = 106;
 	int k = 0;
 
@@ -16,29 +17,36 @@ int main() {
 	printf("S(k + 1) = %d \n", Sumk(k + 1));
 }
 
-int Sumk(int k) {
+int Sumk(int k)
+{
 	int s = 0;
-	for(int i = 0; i < k; ++i) {
+	for (int i = 0; i < k; ++i)
+	{
 		s += i + 1;
 	}
 	return s;
 }
 
-int Func42(int n) {
+int Func42(int n)
+{
 	int k = -1;
-	if(n == 0) {
+	if (n == 0)
+	{
 		k = 0;
 		return k;
-	} else {
+	}
+	else
+	{
 		int s = 0;
-		for(int i = 0; i < n; ++i) {
+		for (int i = 0; i < n; ++i)
+		{
 			s += i + 1;
-			if(s >= n) {
+			if (s >= n)
+			{
 				k = i; // Lấy giá trị vòng lặp trước đó
 				break;
 			}
 		}
 	}
 	return k;
- }
-
+}

@@ -2,19 +2,24 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
 	unsigned int n = 27;
 	int t = 1;
 
 	printf("n = %d \n", n);
 
-	do {
+	do
+	{
 		t = t * 3;
-	} while(t < n);
+	} while (t < n);
 
-	if(t == n) {
+	if (t == n)
+	{
 		printf("n co danh 3^k \n");
-	} else {
+	}
+	else
+	{
 		printf("n khong co danh 3^k \n");
 	}
 }
