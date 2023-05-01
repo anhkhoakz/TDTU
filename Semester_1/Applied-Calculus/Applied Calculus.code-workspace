@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "lab03"
+		},
+		{
+			"path": "lab04"
+		},
+		{
+			"path": "lab06"
+		},
+		{
+			"path": "lab09"
+		},
+		{
+			"path": "lab10"
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"sympy"
+		]
+	}
+}
