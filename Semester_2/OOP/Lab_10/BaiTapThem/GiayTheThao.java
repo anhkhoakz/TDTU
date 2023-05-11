@@ -5,7 +5,7 @@ public class GiayTheThao extends CongTy {
     public GiayTheThao() {
         super();
         setLoaiGiay("");
-        setDonGia(-1);
+        setDonGia(0);
     }
 
     public GiayTheThao(String maSanPham, String tenSanPham, String chatLieu, double kichCo, String mauSac,

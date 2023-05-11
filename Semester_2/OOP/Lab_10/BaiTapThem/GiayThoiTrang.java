@@ -5,9 +5,9 @@ public class GiayThoiTrang extends CongTy {
 
     public GiayThoiTrang() {
         super();
-        setChieuCaoDe(-1);
+        setChieuCaoDe(0);
         setLoaiMuiGiay("");
-        setDonGia(-1);
+        setDonGia(0);
     }
 
     public GiayThoiTrang(String maSanPham, String tenSanPham, String chatLieu, double kichCo, String mauSac,

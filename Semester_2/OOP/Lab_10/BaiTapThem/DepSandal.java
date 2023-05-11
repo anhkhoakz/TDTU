@@ -5,9 +5,9 @@ public class DepSandal extends CongTy {
 
     public DepSandal() {
         super();
-        setSoQuai(-1);
+        setSoQuai(0);
         setLoaiDe("");
-        setDonGia(-1);
+        setDonGia(0);
     }
 
     public DepSandal(String maSanPham, String tenSanPham, String chatLieu, double kichCo, String mauSac,
